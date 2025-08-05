@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Josmid Surgical Center | Sign In</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .signin-container {
+      background: white;
+      padding: 40px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .signin-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .signin-container p {
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #34495e;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1a252f;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: -15px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signin-container">
+    <h2>Josmid Surgical Center</h2>
+    <p>Please sign in to continue</p>
+    <form id="signin-form" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+
+      <div class="error" id="error-msg"></div>
+
+      <button type="submit">Sign In</button>
+    </form>
+    <div class="footer-text">
+        <marquee>&copy; 2025 JOSMID SURGICAL CENTER | ALL RIGHTS RESERVED.</marquee>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signin-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorMsg = document.getElementById('error-msg');
+
+      if (!email || !password) {
+        errorMsg.textContent = 'Both fields are required.';
+        return;
+      }
+
+      // Placeholder success (for demo)
+      errorMsg.textContent = '';
+      alert(`Welcome back, ${email}!`);
+    });
+  </script>
+</body>
+</html>
+

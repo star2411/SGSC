@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Explore.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <title>News & Insights | Josmid Surgical Center</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #006699;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .search-bar {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .article {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+    }
+
+    .article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 20px;
+    }
+
+    .article h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .date {
+      color: #777;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #006699;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Josmid Surgical Center - News & Insights</h1>
+</header>
+
+<div class="container">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search news or topics..." onkeyup="filterArticles()">
+  </div>
+
+  <div class="articles" id="articlesList">
+    <!-- Sample article -->
+    <div class="article">
+      <img src="best.jpg" alt="Surgery News">
+      <div class="article-content">
+        <div class="date">Published: <span class="pub-date">2025-07-25</span></div>
+        <h3>Advancements in Minimally Invasive Surgery</h3>
+        <p>Our surgeons are adopting new laparoscopic tools to improve recovery time and patient outcomes.</p>
+      </div>
+    </div>
+
+    <div class="article">
+      <img src="jet 3.jpg" alt="Recovery">
+      <div class="article-content">
+        <div class="date">Published: <span class="pub-date">2025-06-10</span></div>
+        <h3>Post-Surgery Recovery Tips</h3>
+        <p>We compiled the top 10 recovery practices recommended by our physicians for faster healing.</p>
+      </div>
+    </div>
+
+    <div class="article">
+      <img src="jet.jpg" alt="Facilities Update">
+      <div class="article-content">
+        <div class="date">Published: <span class="pub-date">2025-05-15</span></div>
+        <h3>Grand Opening: New Surgical Wing</h3>
+        <p>We’re proud to announce the opening of our state-of-the-art surgical suite with AI-assisted monitoring.</p>
+      </div>
+    </div>
+
+    <div class="article">
+      <img src="jet 10.jpg" alt="Community">
+      <div class="article-content">
+        <div class="date">Published: <span class="pub-date">2025-04-01</span></div>
+        <h3>Community Health Awareness Drive</h3>
+        <p>Josmid Surgical Center held a free screening event reaching over 500 local residents.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Josmid Surgical Center. All rights reserved.
+</footer>
+
+<script>
+  // Optional: Format date strings (e.g., "2025-06-10" to "June 10, 2025")
+  document.querySelectorAll('.pub-date').forEach(el => {
+    const date = new Date(el.textContent.trim());
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    el.textContent = date.toLocaleDateString(undefined, options);
+  });
+
+  // Optional: Filter articles by search
+  function filterArticles() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const articles = document.getElementById('articlesList').children;
+    for (let article of articles) {
+      const text = article.innerText.toLowerCase();
+      article.style.display = text.includes(input) ? "" : "none";
+    }
+  }
+</script>
+
+</body>
+</html>
