@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Josmid Surgical Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #004d7a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1 1 400px;
+            max-width: 500px;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            margin-top: 0;
+            color: #004d7a;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item strong {
+            display: inline-block;
+            width: 80px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #004d7a;
+            color: #ffffff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #004d7a;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #004d7a;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+        
+    <header>
+        <h1>JOSMID SURGICAL CENTER</h1>
+        <p><i>YOUR HEALTH OUR PRIORITIES</i></p>
+    </header>
+
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info-item"><strong>Phone:</strong> (+234) 7068029728</div>
+            <div class="info-item"><strong>Email:</strong> contact@josephiremide4@gmail.com</div>
+            <div class="info-item"><strong>Address:</strong> 7B, AYOOLA COKER</div>
+            <div class="info-item"><strong>Hours:</strong> Mon–Fri, 8:00 AM – 6:00 PM</div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="mailto:contact@josmidsurgical.com" method="POST" enctype="text/plain">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019388215477!2d-122.41941508468135!3d37.77492977975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808fb217d0cb%3A0xd6f9e1e7d2e177fb!2sMedical%20Center!5e0!3m2!1sen!2sus!4v1616110742040!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0">
+        </iframe>
+    </div>
+
+    <footer>
+        <marquee>&copy; 2025 JOSMID SURGICAL CENTER | ALL RIGHTS RESERVED.</marquee>
+    </footer>
+
+</body>
+</html>
